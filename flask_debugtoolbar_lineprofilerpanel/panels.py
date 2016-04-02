@@ -49,7 +49,7 @@ def process_line_stats(line_stats):
             'timings': [
                 (
                     lineno,
-                    all_lines[lineno - 1],
+                    unicode(all_lines[lineno - 1], 'utf-8'),
                     time * multiplier,
                     nhits,
                 ) for (lineno, nhits, time) in padded_timings
